@@ -2,20 +2,18 @@ version: '3.7'
 
 services:
   django_gunicorn:
-    build:
-      context: .
+    volumes:
+      - static:/static
     env_file:
       - .env
-    volumes:
-      - staticfiles:/app/staticfiles
-    expose:
-      - "8000"
-
+    build:
+      context: .
+    ports:
+      - "8000:8000"
   nginx:
     build: ./nginx
     volumes:
-      - staticfiles:/staticfiles
-      - ./nginx/cert:/etc/nginx/certs:ro
+      - static:/static
     ports:
       - "80:80"
       - "443:443"
@@ -23,4 +21,4 @@ services:
       - django_gunicorn
 
 volumes:
-  staticfiles:
+  static:
