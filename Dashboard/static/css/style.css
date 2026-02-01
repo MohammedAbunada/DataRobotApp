@@ -1,0 +1,367 @@
+.tiblock {
+    align-items: center;
+    display: flex;
+    height: 17px;
+}
+
+.ticontainer .tidot {
+    background-color: #90949c;
+}
+
+.tidot {
+    -webkit-animation: mercuryTypingAnimation 1.5s infinite ease-in-out;
+    border-radius: 2px;
+    display: inline-block;
+    height: 6px;
+    margin-right: 2px;
+    width: 6px;
+}
+
+@-webkit-keyframes mercuryTypingAnimation {
+    0% {
+        -webkit-transform: translateY(0px)
+    }
+    28% {
+        -webkit-transform: translateY(-5px)
+    }
+    44% {
+        -webkit-transform: translateY(0px)
+    }
+}
+
+.tidot:nth-child(1) {
+    -webkit-animation-delay: 400ms;
+}
+
+.tidot:nth-child(2) {
+    -webkit-animation-delay: 300ms;
+}
+
+.tidot:nth-child(3) {
+    -webkit-animation-delay: 200ms;
+}
+
+body {
+    background-color: rgba(247, 247, 252, 1);
+    color: #18203C;
+    font-weight: bold;
+    font-family: 'cairo' !important;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    background: #F4F7FC;
+}
+
+.chatcard {
+    height: 85vh;
+}
+
+.form-control:focus {
+    border-color: #057CC1;
+    box-shadow: none;
+}
+
+.chat-container {
+    flex-grow: 3;
+    overflow-y: auto;
+    font-size: 16px !important;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.typing-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.typing-indicator-dot {
+    animation: typing 1s infinite;
+    background-color: #057CC1;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 5px;
+    width: 10px;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 0.2;
+        transform: translateY(0);
+    }
+}
+
+.btn-primary {
+    background-color: #057CC1;
+    border-color: #057CC1;
+}
+
+.btn-primary:hover {
+    background-color: #54a0cc;
+    border-color: #54a0cc;
+}
+
+.btn-primary:disabled {
+    background-color: rgba(161, 178, 197, 1);
+    border-color: rgba(161, 178, 197, 1);
+}
+
+
+/* make it red instead (with with same width and style) */
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="radio"]:focus,
+.btn-primary:focus,
+.uneditable-input:focus {
+    border-color: rgba(5, 124, 193, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(5, 124, 193, 0.6);
+    outline: 0 none;
+}
+
+input[type="radio"]:checked {
+    background-color: #057CC1;
+}
+
+.chat-message {
+    position: relative;
+    ;
+}
+
+.reply-message {
+    border-radius: 20px 20px 20px 0px !important;
+    background: #FFF !important;
+    color: black !important;
+    padding: 1rem !important;
+    padding: 0.5rem;
+    padding-right: 20px;
+    display: inline-block;
+    max-width: calc(100% - 42px);
+    min-width: 50px;
+    width: fit-content;
+}
+
+.user-message {
+    border-radius: 20px 20px 0px 20px !important;
+    background: #057CC1 !important;
+    color: #FFF !important;
+    padding: 1rem !important;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem !important;
+    display: inline-block;
+    max-width: calc(100% - 42px);
+    min-width: 50px;
+}
+
+.header_color {
+    color: #057CC1;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 256px;
+    height: 256px;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.StopButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.CustomToolTip {
+    position: relative;
+    display: inline-block;
+    background: url(/static/img/info.png) no-repeat;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Tooltip text */
+
+.CustomToolTip .tooltiptext {
+    visibility: hidden;
+    width: 375px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    left: 16px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.CustomToolTip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.SummaryHeader {
+    margin-bottom: 0px !important;
+    margin-top: 0.5rem !important;
+}
+
+.SummaryText {
+    margin-bottom: 0px !important;
+    font-weight: normal !important;
+}
+
+.MultipleChoiceBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.MultipleChoiceButton {
+    min-width: 64px;
+    border-radius: 10px;
+}
+
+.PopupParent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.MainContainer {
+    max-width: 1000px;
+}
+
+.ChatForm {
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+    background: white;
+    box-shadow: 0px 0px 20px rgba(170, 170, 170, 0.08);
+    border-radius: 20px;
+    align-items: center;
+}
+
+.ChatInputForm {
+    margin-right: 10px;
+    padding-right: 25px;
+    padding: 10px;
+    flex-grow: 2;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+
+/* remove the input focus blue box, it will be in the wrong place. */
+
+ChatInputForm:focus {
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+}
+
+.ChatContainer {
+    display: flex;
+    flex-direction: reverse;
+    align-items: flex-end;
+    margin-bottom: 1.5rem !important;
+    gap: 10px;
+}
+
+.RobotIcon {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background: #E6EFF8;
+    border-radius: 10px;
+}
+
+.RobotIcon img {
+    width: 100%;
+    padding: 5px;
+}
+
+.TimeText {
+    color: #A1B2C5;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    direction: ltr;
+}
+
+.Right {
+    left: auto !important;
+    right: 0 !important;
+}
+
+.SendButton {
+    width: 32px;
+    height: 32px;
+    background: no-repeat;
+    outline: none;
+    border: none;
+    margin-left: 16px;
+}
+
+@media (max-width: 750px) {
+    .MainContainer {
+        padding: 0 !important;
+    }
+    .chatcard {
+        height: 100vh !important;
+    }
+    .my-5 {
+        margin: 0 !important;
+    }
+    .container {
+        padding: 0 !important;
+    }
+}
