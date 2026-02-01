@@ -11,6 +11,8 @@ or Plotly charts when a chart spec is returned.
 - `Dashboard/templates/`: HTML templates (single-page chat UI)
 - `Dashboard/static/`: CSS/JS and assets used by the chat UI
 - `Dockerfile`: Single-container build for running the app
+- `docker-compose.yml`: Nginx + Django multi-container setup
+- `nginx/`: Nginx config used by docker compose
 - `entrypoint.sh`: Runs migrations, collects static files, and starts Gunicorn
 - `requirements.txt`: Python dependencies
 
@@ -26,7 +28,7 @@ or Plotly charts when a chart spec is returned.
    - `python Dashboard/manage.py migrate`
    - `python Dashboard/manage.py runserver 0.0.0.0:8080`
 
-## Running with Docker
+## Running with Docker (Single Container)
 
 ```
 docker build -t datarobot-app .
@@ -36,5 +38,9 @@ docker run --rm -p 8080:8080 \
   -e DEPLOYMENT_ID="YOUR_DEPLOYMENT_ID" \
   datarobot-app
 ```
+## Running with Docker Compose (Nginx + Django)
 
+```
+docker compose build
+docker compose up
 ```
