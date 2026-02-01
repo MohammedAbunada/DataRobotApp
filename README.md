@@ -26,13 +26,13 @@ or Plotly charts when a chart spec is returned.
    - `DEPLOYMENT_ID`
 3. Run the server:
    - `python Dashboard/manage.py migrate`
-   - `python Dashboard/manage.py runserver 0.0.0.0:8080`
+   - `python Dashboard/manage.py runserver 0.0.0.0:8000`
 
 ## Running with Docker (Single Container)
 
 ```
 docker build -t datarobot-app .
-docker run --rm -p 8080:8080 \
+docker run --rm -p 8000:8000 \
   -e DATAROBOT_ENDPOINT="https://app.datarobot.com/api/v2" \
   -e DATAROBOT_API_TOKEN="YOUR_TOKEN" \
   -e DEPLOYMENT_ID="YOUR_DEPLOYMENT_ID" \

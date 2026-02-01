@@ -9,7 +9,7 @@ services:
     volumes:
       - staticfiles:/app/staticfiles
     expose:
-      - "8080"
+      - "8000"
 
   nginx:
     build: ./nginx
