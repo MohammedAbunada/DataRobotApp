@@ -47,7 +47,7 @@ function renderChartMessage(chartSpec) {
     chat.appendChild(wrapper);
     const chartId = `plotly_chart_${chartCounter}`;
     chartCounter += 1;
-    const layout = { autosize: true, ...(chartSpec.layout || {}) };
+    const layout = { autosize: true, height: 500, ...(chartSpec.layout || {}) };
     Plotly.newPlot(chartId, chartSpec.data, layout);
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
