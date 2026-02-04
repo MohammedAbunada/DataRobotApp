@@ -39,7 +39,7 @@ function renderChartMessage(chartSpec) {
     wrapper.innerHTML = `
         <div class="RobotIcon"><img src="/static/img/brain_icon.png"></div>
         <div class="chat-message reply-message">
-            <div id="plotly_chart_${chartCounter}" style="width: 800px; max-width: 100%; height: 320px;"></div>
+            <div id="plotly_chart_${chartCounter}" style="width: 800px; max-width: 100%; height: 500px;"></div>
             <div class="TimeText">${getCurrentTime()}</div>
         </div>
     `;
