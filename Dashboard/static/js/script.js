@@ -100,6 +100,14 @@ chatForm.addEventListener('submit', (e) => {
         .then((response) => response.json())
         .then((data) => {
             const reply = data.message || "Thanks! Chat is connected.";
+            const staticMessages = {
+                REFUSED: "Sorry, I can’t help with that request. It breaks the usage policy.",
+                OUT_OF_SCOPE: "That request is outside my supported scope.",
+            };
+            if (staticMessages[reply]) {
+                renderMessage(staticMessages[reply], false);
+                return;
+            }
             const chartSpec = tryParseChartMessage(reply);
             if (chartSpec) {
                 renderChartMessage(chartSpec);
